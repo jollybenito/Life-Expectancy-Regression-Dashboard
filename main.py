@@ -456,7 +456,9 @@ def feature_importances(data):
         dbc.CardHeader(html.H2("Feature importances"), className="text-center"),
         dcc.Graph(figure=fig, style={"height":30 * len(X_test.columns)})
     ])
-
+# **Crucial:** Gunicorn looks for the 'server' variable by default.
+# The .server attribute is the underlying Flask app object.
+server = app.server
 
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=8050, debug=True)

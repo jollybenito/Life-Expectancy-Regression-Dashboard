@@ -8,7 +8,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
 import custom_functions as cf
-from scipy.stats import norm
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from xgboost import XGBRegressor

@@ -199,7 +199,7 @@ def model_comparer(X_train, y_train):
 
 
 
-df = pd.read_csv('https://raw.githubusercontent.com/jollybenito/Life-Expectancy-Regression-Dashboard/refs/heads/main/train.csv', index_col=0)
+df = pd.read_csv('https://raw.githubusercontent.com/jollybenito/Life-Expectancy-Regression-Dashboard/refs/heads/main/train.csv', index_col=0).iloc[:1000]
 #df = pd.read_csv('train.csv', index_col=0)
 
 nation_dropdown = html.Div(

@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from xgboost import XGBRegressor
 
-app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
 df = pd.read_csv('https://raw.githubusercontent.com/jollybenito/Life-Expectancy-Regression-Dashboard/refs/heads/main/train.csv', index_col=0)

@@ -16,7 +16,9 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error, make_scorer
 
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__, 
+           external_stylesheets=[dbc.themes.BOOTSTRAP],
+           serve_locally=True)
 
 
 def inflation_cleaning(df):
@@ -186,16 +188,6 @@ def model_comparer(X_train, y_train):
                         value_name="RMSE Score")
 
     return just_scores_df, best_grid_df
-
-
-
-
-
-
-
-
-
-
 
 
 

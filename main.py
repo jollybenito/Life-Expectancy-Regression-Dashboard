@@ -17,7 +17,8 @@ from sklearn.metrics import mean_squared_error, make_scorer
 
 
 app = Dash(__name__, 
-           external_stylesheets=[dbc.themes.BOOTSTRAP])
+           external_stylesheets=[dbc.themes.BOOTSTRAP],
+           serve_locally=False)
 
 
 def inflation_cleaning(df):
